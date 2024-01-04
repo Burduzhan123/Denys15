@@ -1,48 +1,27 @@
-/*function fib(n) {
-    let a = 1;
-    let b = 1;
-    for (let i = 3; i <= n; i++) {
-      let c = a + b;
-      a = b;
-      b = c;
-    }
-    return b;
+/*function func(n) {
+  return n <= 1 ? n : func(n - 1) + func(n - 2);
+}
+console.log(func(10)); // 55 */
+
+
+/*function isPalindrome(num, count) {
+  count = count || 0;
+
+  let str = num.toString();
+  let strReverse = str.split("").reverse().join("");
+  
+  if (str === strReverse) {
+    return {
+      result: num,
+      steps: count,
+    };
   }
-  
-  console.log( fib(2) ); 
-  console.log( fib(3) ); 
-  console.log( fib(10) ); */
+  return isPalindrome(num + Number(strReverse), count + 1);
+} 
 
+console.log(isPalindrome(96));//выдаст ошибку, если Lychrel number*/
+ 
 
-
-
- /* function isPalindrome(number) {
-    const reversed = parseInt(number.toString().split('').reverse().join(''));
-    return number === reversed;
-  }
-  
-  function createPalindrome(startNumber) {
-    let steps = 0;
-    let currentNumber = startNumber;
-  
-    while (!isPalindrome(currentNumber)) {
-      const reversed = parseInt(currentNumber.toString().split('').reverse().join(''));
-      currentNumber += reversed;
-      steps++;
-      if (steps >= 1000) {
-        return { result: `Не палиндром: ${number}`, steps };
-      }
-    }
-  
-    return { result: currentNumber, steps };
-  }
-  
-  const number = 145;
-  const result = createPalindrome(number);
-  
-  console.log(`Палиндром: ${result.result}`);
-  console.log(`Шаги: ${result.steps}`);
- */ 
 
 
   function permuteUnique(nums) {
